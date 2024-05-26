@@ -35,6 +35,15 @@ scrape_configs:
       - targets: [ '1.0.0.1' ]
         labels:
           name: 'cloudflare_b'
+      - targets: [ 'philmonroe.com' ]
+        labels:
+          name: 'philmonroe.com'
+      - targets: [ 'google.com' ]
+        labels:
+          name: 'google.com'
+      - targets: [ 'facebook.com' ]
+        labels:
+          name: 'facebook.com'
     relabel_configs:
       - source_labels: [ __address__ ]
         target_label: __param_target
